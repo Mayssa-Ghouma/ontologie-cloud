@@ -1,1 +1,29 @@
+Requête N°1: Offres gratuites avec leurs zones géographiques
+PREFIX ont: http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3# 
+SELECT ?offreGratuite ?zone 
+WHERE { ?offreGratuite a ont:OffreGratuite . ?offreGratuite ont:disponibleDans ?zone . }
 
+Requête N°2: Services disponibles en Asie avec leurs offres 
+PREFIX ont: http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3# 
+SELECT ?service ?offre ?fournisseur 
+WHERE { ?offre ont:estDeType ?service . ?offre ont:disponibleDans ont:Asia . ?offre ont:estProposePar ?fournisseur . }
+
+Requête N°3: Offres de type IaaS avec leurs tarifications 
+PREFIX ont: http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3# 
+SELECT ?offre ?service ?tarification 
+WHERE { ?offre ont:estDeType ?service . ?service a ont:ServiceIaas . ?offre ont:aTarification ?tarification . }
+
+Requête N°4: Offres à haute disponibilité avec leurs zones géographiques 
+PREFIX ont: http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3# 
+SELECT ?offre ?zone 
+WHERE { ?offre a ont:OffreHauteDisponibilite . ?offre ont:disponibleDans ?zone . }
+
+Requête N°5: Services IaaS proposés par AWS 
+PREFIX ont: http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3# 
+SELECT DISTINCT ?service 
+WHERE { ?offre ont:estDeType ?service . ?offre ont:estProposePar ont:AWS . ?service a ont:ServiceIaas . }
+
+Requête N°6: Toutes les offres gratuites avec leurs fournisseurs 
+PREFIX ont: http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3# 
+SELECT ?offre ?fournisseur 
+WHERE { ?offre a ont:OffreGratuite . ?offre ont:estProposePar ?fournisseur . }
