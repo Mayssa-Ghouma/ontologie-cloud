@@ -1,1 +1,873 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3">
+    <Prefix name="" IRI="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="untitled-ontology-3" IRI="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>ontologie des offres cloud computing</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Abonnement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fournisseur"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gratuit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Offre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OffreEconomique"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OffreEntreprise"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OffreGratuite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OffreHauteDisponibilite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PayAsYouGo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServiceIaas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServicePaas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServiceSaas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tarification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ZoneGeographique"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aTarification"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#disponibleDans"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#estDeType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#estProposePar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#propose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AWS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AWSSpot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Afrique"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AmériqueNord"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AmériqueSud"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AppEngine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AppService"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Asia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AwsEntreprise"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AwsFree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AwsFreeTier"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AwsHA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AwsOnDemand"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AwsReserved"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Azure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AzureEntreprise"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AzureFree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AzureFreeTier"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AzureHA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AzureLowCost"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AzurePayG"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AzureReserved"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AzureVM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EC2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Europe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GCP"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GCPCommit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GCPEntreprise"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GCPFree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GCPFreeTier"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GCPHA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GCPPayG"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Office365"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Workspace"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Abonnement"/>
+        <Class IRI="#Tarification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gratuit"/>
+        <Class IRI="#Tarification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OffreEconomique"/>
+        <Class IRI="#Offre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OffreEntreprise"/>
+        <Class IRI="#Offre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OffreGratuite"/>
+        <Class IRI="#Offre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OffreHauteDisponibilite"/>
+        <Class IRI="#Offre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PayAsYouGo"/>
+        <Class IRI="#Tarification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceIaas"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServicePaas"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceSaas"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Fournisseur"/>
+        <NamedIndividual IRI="#AWS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OffreEconomique"/>
+        <NamedIndividual IRI="#AWSSpot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ZoneGeographique"/>
+        <NamedIndividual IRI="#Afrique"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ZoneGeographique"/>
+        <NamedIndividual IRI="#AmériqueNord"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ZoneGeographique"/>
+        <NamedIndividual IRI="#AmériqueSud"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ServicePaas"/>
+        <NamedIndividual IRI="#AppEngine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ServicePaas"/>
+        <NamedIndividual IRI="#AppService"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ZoneGeographique"/>
+        <NamedIndividual IRI="#Asia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OffreEntreprise"/>
+        <NamedIndividual IRI="#AwsEntreprise"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gratuit"/>
+        <NamedIndividual IRI="#AwsFree"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OffreGratuite"/>
+        <NamedIndividual IRI="#AwsFreeTier"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OffreHauteDisponibilite"/>
+        <NamedIndividual IRI="#AwsHA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PayAsYouGo"/>
+        <NamedIndividual IRI="#AwsOnDemand"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Abonnement"/>
+        <NamedIndividual IRI="#AwsReserved"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fournisseur"/>
+        <NamedIndividual IRI="#Azure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OffreEntreprise"/>
+        <NamedIndividual IRI="#AzureEntreprise"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gratuit"/>
+        <NamedIndividual IRI="#AzureFree"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OffreGratuite"/>
+        <NamedIndividual IRI="#AzureFreeTier"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OffreHauteDisponibilite"/>
+        <NamedIndividual IRI="#AzureHA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OffreEconomique"/>
+        <NamedIndividual IRI="#AzureLowCost"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PayAsYouGo"/>
+        <NamedIndividual IRI="#AzurePayG"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Abonnement"/>
+        <NamedIndividual IRI="#AzureReserved"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ServiceIaas"/>
+        <NamedIndividual IRI="#AzureVM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ServiceIaas"/>
+        <NamedIndividual IRI="#EC2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ZoneGeographique"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fournisseur"/>
+        <NamedIndividual IRI="#GCP"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Abonnement"/>
+        <NamedIndividual IRI="#GCPCommit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OffreEntreprise"/>
+        <NamedIndividual IRI="#GCPEntreprise"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gratuit"/>
+        <NamedIndividual IRI="#GCPFree"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OffreGratuite"/>
+        <NamedIndividual IRI="#GCPFreeTier"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OffreHauteDisponibilite"/>
+        <NamedIndividual IRI="#GCPHA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PayAsYouGo"/>
+        <NamedIndividual IRI="#GCPPayG"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ServiceSaas"/>
+        <NamedIndividual IRI="#Office365"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ServiceSaas"/>
+        <NamedIndividual IRI="#Workspace"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#propose"/>
+        <NamedIndividual IRI="#AWS"/>
+        <NamedIndividual IRI="#AWSSpot"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#propose"/>
+        <NamedIndividual IRI="#AWS"/>
+        <NamedIndividual IRI="#AwsEntreprise"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#propose"/>
+        <NamedIndividual IRI="#AWS"/>
+        <NamedIndividual IRI="#AwsFreeTier"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#propose"/>
+        <NamedIndividual IRI="#AWS"/>
+        <NamedIndividual IRI="#AwsHA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aTarification"/>
+        <NamedIndividual IRI="#AWSSpot"/>
+        <NamedIndividual IRI="#AwsOnDemand"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aTarification"/>
+        <NamedIndividual IRI="#AWSSpot"/>
+        <NamedIndividual IRI="#AwsReserved"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AWSSpot"/>
+        <NamedIndividual IRI="#Afrique"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AWSSpot"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estDeType"/>
+        <NamedIndividual IRI="#AWSSpot"/>
+        <NamedIndividual IRI="#EC2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estProposePar"/>
+        <NamedIndividual IRI="#AWSSpot"/>
+        <NamedIndividual IRI="#AWS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aTarification"/>
+        <NamedIndividual IRI="#AwsEntreprise"/>
+        <NamedIndividual IRI="#AwsOnDemand"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aTarification"/>
+        <NamedIndividual IRI="#AwsEntreprise"/>
+        <NamedIndividual IRI="#AwsReserved"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AwsEntreprise"/>
+        <NamedIndividual IRI="#AmériqueNord"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AwsEntreprise"/>
+        <NamedIndividual IRI="#AmériqueSud"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AwsEntreprise"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estDeType"/>
+        <NamedIndividual IRI="#AwsEntreprise"/>
+        <NamedIndividual IRI="#EC2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estProposePar"/>
+        <NamedIndividual IRI="#AwsEntreprise"/>
+        <NamedIndividual IRI="#AWS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aTarification"/>
+        <NamedIndividual IRI="#AwsFreeTier"/>
+        <NamedIndividual IRI="#AwsFree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AwsFreeTier"/>
+        <NamedIndividual IRI="#Afrique"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AwsFreeTier"/>
+        <NamedIndividual IRI="#AmériqueNord"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estDeType"/>
+        <NamedIndividual IRI="#AwsFreeTier"/>
+        <NamedIndividual IRI="#EC2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estProposePar"/>
+        <NamedIndividual IRI="#AwsFreeTier"/>
+        <NamedIndividual IRI="#AWS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aTarification"/>
+        <NamedIndividual IRI="#AwsHA"/>
+        <NamedIndividual IRI="#AwsReserved"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AwsHA"/>
+        <NamedIndividual IRI="#AmériqueNord"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AwsHA"/>
+        <NamedIndividual IRI="#AmériqueSud"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estDeType"/>
+        <NamedIndividual IRI="#AwsHA"/>
+        <NamedIndividual IRI="#EC2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estProposePar"/>
+        <NamedIndividual IRI="#AwsHA"/>
+        <NamedIndividual IRI="#AWS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#propose"/>
+        <NamedIndividual IRI="#Azure"/>
+        <NamedIndividual IRI="#AzureEntreprise"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#propose"/>
+        <NamedIndividual IRI="#Azure"/>
+        <NamedIndividual IRI="#AzureFreeTier"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#propose"/>
+        <NamedIndividual IRI="#Azure"/>
+        <NamedIndividual IRI="#AzureHA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#propose"/>
+        <NamedIndividual IRI="#Azure"/>
+        <NamedIndividual IRI="#AzureLowCost"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aTarification"/>
+        <NamedIndividual IRI="#AzureEntreprise"/>
+        <NamedIndividual IRI="#AzurePayG"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aTarification"/>
+        <NamedIndividual IRI="#AzureEntreprise"/>
+        <NamedIndividual IRI="#AzureReserved"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AzureEntreprise"/>
+        <NamedIndividual IRI="#Afrique"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AzureEntreprise"/>
+        <NamedIndividual IRI="#Asia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estDeType"/>
+        <NamedIndividual IRI="#AzureEntreprise"/>
+        <NamedIndividual IRI="#AppService"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estProposePar"/>
+        <NamedIndividual IRI="#AzureEntreprise"/>
+        <NamedIndividual IRI="#Azure"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aTarification"/>
+        <NamedIndividual IRI="#AzureFreeTier"/>
+        <NamedIndividual IRI="#AzureFree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AzureFreeTier"/>
+        <NamedIndividual IRI="#Afrique"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AzureFreeTier"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estDeType"/>
+        <NamedIndividual IRI="#AzureFreeTier"/>
+        <NamedIndividual IRI="#AppEngine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estProposePar"/>
+        <NamedIndividual IRI="#AzureFreeTier"/>
+        <NamedIndividual IRI="#Azure"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aTarification"/>
+        <NamedIndividual IRI="#AzureHA"/>
+        <NamedIndividual IRI="#AzureReserved"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AzureHA"/>
+        <NamedIndividual IRI="#AmériqueSud"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AzureHA"/>
+        <NamedIndividual IRI="#Asia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estDeType"/>
+        <NamedIndividual IRI="#AzureHA"/>
+        <NamedIndividual IRI="#AzureVM"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estProposePar"/>
+        <NamedIndividual IRI="#AzureHA"/>
+        <NamedIndividual IRI="#Azure"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aTarification"/>
+        <NamedIndividual IRI="#AzureLowCost"/>
+        <NamedIndividual IRI="#AzurePayG"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aTarification"/>
+        <NamedIndividual IRI="#AzureLowCost"/>
+        <NamedIndividual IRI="#AzureReserved"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AzureLowCost"/>
+        <NamedIndividual IRI="#AmériqueSud"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AzureLowCost"/>
+        <NamedIndividual IRI="#Asia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#AzureLowCost"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estDeType"/>
+        <NamedIndividual IRI="#AzureLowCost"/>
+        <NamedIndividual IRI="#Office365"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estProposePar"/>
+        <NamedIndividual IRI="#AzureLowCost"/>
+        <NamedIndividual IRI="#Azure"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#propose"/>
+        <NamedIndividual IRI="#GCP"/>
+        <NamedIndividual IRI="#GCPEntreprise"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#propose"/>
+        <NamedIndividual IRI="#GCP"/>
+        <NamedIndividual IRI="#GCPFreeTier"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#propose"/>
+        <NamedIndividual IRI="#GCP"/>
+        <NamedIndividual IRI="#GCPHA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aTarification"/>
+        <NamedIndividual IRI="#GCPEntreprise"/>
+        <NamedIndividual IRI="#GCPCommit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aTarification"/>
+        <NamedIndividual IRI="#GCPEntreprise"/>
+        <NamedIndividual IRI="#GCPPayG"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#GCPEntreprise"/>
+        <NamedIndividual IRI="#Afrique"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#GCPEntreprise"/>
+        <NamedIndividual IRI="#Asia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#GCPEntreprise"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estDeType"/>
+        <NamedIndividual IRI="#GCPEntreprise"/>
+        <NamedIndividual IRI="#AppEngine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estProposePar"/>
+        <NamedIndividual IRI="#GCPEntreprise"/>
+        <NamedIndividual IRI="#GCP"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aTarification"/>
+        <NamedIndividual IRI="#GCPFreeTier"/>
+        <NamedIndividual IRI="#GCPFree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#GCPFreeTier"/>
+        <NamedIndividual IRI="#Asia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#GCPFreeTier"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estDeType"/>
+        <NamedIndividual IRI="#GCPFreeTier"/>
+        <NamedIndividual IRI="#Workspace"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estProposePar"/>
+        <NamedIndividual IRI="#GCPFreeTier"/>
+        <NamedIndividual IRI="#GCP"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#aTarification"/>
+        <NamedIndividual IRI="#GCPHA"/>
+        <NamedIndividual IRI="#GCPCommit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#GCPHA"/>
+        <NamedIndividual IRI="#Afrique"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#GCPHA"/>
+        <NamedIndividual IRI="#Asia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <NamedIndividual IRI="#GCPHA"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estDeType"/>
+        <NamedIndividual IRI="#GCPHA"/>
+        <NamedIndividual IRI="#Workspace"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estProposePar"/>
+        <NamedIndividual IRI="#GCPHA"/>
+        <NamedIndividual IRI="#GCP"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#estProposePar"/>
+        <ObjectProperty IRI="#propose"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#aTarification"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#disponibleDans"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#estDeType"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#estProposePar"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#propose"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aTarification"/>
+        <Class IRI="#Offre"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <Class IRI="#Offre"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#estDeType"/>
+        <Class IRI="#Offre"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#estProposePar"/>
+        <Class IRI="#Offre"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#propose"/>
+        <Class IRI="#Fournisseur"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aTarification"/>
+        <Class IRI="#Tarification"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#disponibleDans"/>
+        <Class IRI="#ZoneGeographique"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#estDeType"/>
+        <Class IRI="#Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#estProposePar"/>
+        <Class IRI="#Fournisseur"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#propose"/>
+        <Class IRI="#Offre"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AppEngine</IRI>
+        <Literal>(GCP)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AppService</IRI>
+        <Literal>(Azure)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AzureVM</IRI>
+        <Literal>(Azure)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EC2</IRI>
+        <Literal>(AWS)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Gratuit</IRI>
+        <Literal>annuel ou mensuel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Gratuit</IRI>
+        <Literal>gratuit avec limites d&apos;usage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Office365</IRI>
+        <Literal>(Azure)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OffreEconomique</IRI>
+        <Literal>Offres à bas cout, idéales pour les startups</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OffreEntreprise</IRI>
+        <Literal>Offres premium</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OffreGratuite</IRI>
+        <Literal>Offres gratuites (Free Tier) avec des limites d&apos;utilisation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OffreHauteDisponibilite</IRI>
+        <Literal>Offres garantissant un taux de disponibilité élevé (99,9%)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PayAsYouGo</IRI>
+        <Literal>facturation à l&apos;heure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ServiceIaas</IRI>
+        <Literal>Infrastructure as a service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ServicePaas</IRI>
+        <Literal>Platforme as a service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Workspace</IRI>
+        <Literal>(GCP)</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
 
