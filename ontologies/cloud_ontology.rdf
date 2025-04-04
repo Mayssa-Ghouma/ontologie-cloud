@@ -1,0 +1,574 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3/"
+     xml:base="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3">
+        <rdfs:comment>ontologie des offres cloud computing</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#aTarification -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#aTarification">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Offre"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Tarification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#disponibleDans -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#disponibleDans">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Offre"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ZoneGeographique"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#estDeType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#estDeType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Offre"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#estProposePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#estProposePar">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#propose"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Offre"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Fournisseur"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#propose -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#propose">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Fournisseur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Offre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Abonnement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Abonnement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Tarification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Fournisseur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Fournisseur"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Gratuit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Gratuit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Tarification"/>
+        <rdfs:comment>annuel ou mensuel</rdfs:comment>
+        <rdfs:comment>gratuit avec limites d&apos;usage</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Offre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Offre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreEconomique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreEconomique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Offre"/>
+        <rdfs:comment>Offres à bas cout, idéales pour les startups</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreEntreprise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreEntreprise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Offre"/>
+        <rdfs:comment>Offres premium</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreGratuite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreGratuite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Offre"/>
+        <rdfs:comment>Offres gratuites (Free Tier) avec des limites d&apos;utilisation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreHauteDisponibilite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreHauteDisponibilite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Offre"/>
+        <rdfs:comment>Offres garantissant un taux de disponibilité élevé (99,9%)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#PayAsYouGo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#PayAsYouGo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Tarification"/>
+        <rdfs:comment>facturation à l&apos;heure</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Service"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ServiceIaas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ServiceIaas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Service"/>
+        <rdfs:comment>Infrastructure as a service</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ServicePaas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ServicePaas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Service"/>
+        <rdfs:comment>Platforme as a service</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ServiceSaas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ServiceSaas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Tarification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Tarification"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ZoneGeographique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ZoneGeographique"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AWS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AWS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Fournisseur"/>
+        <untitled-ontology-3:propose rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AWSSpot"/>
+        <untitled-ontology-3:propose rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsEntreprise"/>
+        <untitled-ontology-3:propose rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsFreeTier"/>
+        <untitled-ontology-3:propose rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsHA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AWSSpot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AWSSpot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreEconomique"/>
+        <untitled-ontology-3:aTarification rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsOnDemand"/>
+        <untitled-ontology-3:aTarification rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsReserved"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Afrique"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Europe"/>
+        <untitled-ontology-3:estDeType rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#EC2"/>
+        <untitled-ontology-3:estProposePar rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AWS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Afrique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Afrique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ZoneGeographique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AmériqueNord -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AmériqueNord">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ZoneGeographique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AmériqueSud -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AmériqueSud">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ZoneGeographique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AppEngine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AppEngine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ServicePaas"/>
+        <rdfs:comment>(GCP)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AppService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AppService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ServicePaas"/>
+        <rdfs:comment>(Azure)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Asia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Asia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ZoneGeographique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsEntreprise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsEntreprise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreEntreprise"/>
+        <untitled-ontology-3:aTarification rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsOnDemand"/>
+        <untitled-ontology-3:aTarification rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsReserved"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AmériqueNord"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AmériqueSud"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Europe"/>
+        <untitled-ontology-3:estDeType rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#EC2"/>
+        <untitled-ontology-3:estProposePar rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AWS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsFree -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsFree">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Gratuit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsFreeTier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsFreeTier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreGratuite"/>
+        <untitled-ontology-3:aTarification rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsFree"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Afrique"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AmériqueNord"/>
+        <untitled-ontology-3:estDeType rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#EC2"/>
+        <untitled-ontology-3:estProposePar rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AWS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsHA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsHA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreHauteDisponibilite"/>
+        <untitled-ontology-3:aTarification rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsReserved"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AmériqueNord"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AmériqueSud"/>
+        <untitled-ontology-3:estDeType rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#EC2"/>
+        <untitled-ontology-3:estProposePar rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AWS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsOnDemand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsOnDemand">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#PayAsYouGo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsReserved -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AwsReserved">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Abonnement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Azure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Azure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Fournisseur"/>
+        <untitled-ontology-3:propose rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureEntreprise"/>
+        <untitled-ontology-3:propose rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureFreeTier"/>
+        <untitled-ontology-3:propose rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureHA"/>
+        <untitled-ontology-3:propose rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureLowCost"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureEntreprise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureEntreprise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreEntreprise"/>
+        <untitled-ontology-3:aTarification rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzurePayG"/>
+        <untitled-ontology-3:aTarification rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureReserved"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Afrique"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Asia"/>
+        <untitled-ontology-3:estDeType rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AppService"/>
+        <untitled-ontology-3:estProposePar rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Azure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureFree -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureFree">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Gratuit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureFreeTier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureFreeTier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreGratuite"/>
+        <untitled-ontology-3:aTarification rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureFree"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Afrique"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Europe"/>
+        <untitled-ontology-3:estDeType rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AppEngine"/>
+        <untitled-ontology-3:estProposePar rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Azure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureHA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureHA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreHauteDisponibilite"/>
+        <untitled-ontology-3:aTarification rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureReserved"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AmériqueSud"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Asia"/>
+        <untitled-ontology-3:estDeType rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureVM"/>
+        <untitled-ontology-3:estProposePar rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Azure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureLowCost -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureLowCost">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreEconomique"/>
+        <untitled-ontology-3:aTarification rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzurePayG"/>
+        <untitled-ontology-3:aTarification rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureReserved"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AmériqueSud"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Asia"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Europe"/>
+        <untitled-ontology-3:estDeType rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Office365"/>
+        <untitled-ontology-3:estProposePar rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Azure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzurePayG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzurePayG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#PayAsYouGo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureReserved -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureReserved">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Abonnement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureVM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AzureVM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ServiceIaas"/>
+        <rdfs:comment>(Azure)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#EC2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#EC2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ServiceIaas"/>
+        <rdfs:comment>(AWS)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Europe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Europe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ZoneGeographique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Fournisseur"/>
+        <untitled-ontology-3:propose rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPEntreprise"/>
+        <untitled-ontology-3:propose rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPFreeTier"/>
+        <untitled-ontology-3:propose rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPHA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPCommit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPCommit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Abonnement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPEntreprise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPEntreprise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreEntreprise"/>
+        <untitled-ontology-3:aTarification rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPCommit"/>
+        <untitled-ontology-3:aTarification rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPPayG"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Afrique"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Asia"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Europe"/>
+        <untitled-ontology-3:estDeType rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#AppEngine"/>
+        <untitled-ontology-3:estProposePar rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPFree -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPFree">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Gratuit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPFreeTier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPFreeTier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreGratuite"/>
+        <untitled-ontology-3:aTarification rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPFree"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Asia"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Europe"/>
+        <untitled-ontology-3:estDeType rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Workspace"/>
+        <untitled-ontology-3:estProposePar rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPHA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPHA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#OffreHauteDisponibilite"/>
+        <untitled-ontology-3:aTarification rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPCommit"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Afrique"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Asia"/>
+        <untitled-ontology-3:disponibleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Europe"/>
+        <untitled-ontology-3:estDeType rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Workspace"/>
+        <untitled-ontology-3:estProposePar rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPPayG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#GCPPayG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#PayAsYouGo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Office365 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Office365">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ServiceSaas"/>
+        <rdfs:comment>(Azure)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Workspace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#Workspace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#ServiceSaas"/>
+        <rdfs:comment>(GCP)</rdfs:comment>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
