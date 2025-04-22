@@ -56,27 +56,17 @@ Sous-classes :
 
 **ZoneGeographique:** Afrique, Asia, Europe, AmériqueNord, AmériqueSud
 
-**Propriétés**
 
-**propose:**
-- Domain: Fournisseur 
-- Range: Offre
+## Propriétés
 
-**estProposePar (inverse: propose) :**
-- Domain: Offre
-- Range: Fournisseur
+| Propriété          | Description                                  | Domaine     | Portée             | Inverse         |
+|--------------------|----------------------------------------------|-------------|---------------------|------------------|
+| `propose`          |                                               | Fournisseur | Offre              | `estProposePar`  |
+| `estProposePar`    | Inverse de `propose`                          | Offre       | Fournisseur        | `propose`        |
+| `estDeType`        | Associe une offre à un type de service        | Offre       | Service            | -                |
+| `aTarification`    | Modèle de paiement d'une offre                | Offre       | Tarification       | -                |
+| `disponibleDans`   | Zones géographiques disponibles               | Offre       | ZoneGeographique   | -                |
 
-**estDeType : Associe une offre à un type de service**
-- Domain: Offre
-- Range: Service
-
-**aTarification : Modèle de paiement d'une offre**
-- Domain: Offre
-- Range: Tarification
-
-**disponibleDans : Zones géographiques disponibles**
-- Domain: Offre
-- Range: ZoneGeographique
 
 ##  5. Requêtes SPARQL
 
