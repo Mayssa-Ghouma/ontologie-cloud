@@ -1,1 +1,12 @@
+1) Recommandation pour les startups
+OffreEconomique(?oe) ^ disponibleDans(?oe, ?zone) ^ ZoneGeographique(?zone) ^ aTarification(?oe, ?t) ^ Abonnement(?t) -> RecommandeePour(?oe, Startups)  
 
+2) Limitations applicables
+
+OffreGratuite(?og) ^ estDeType(?og, ?s) ^ ServiceIaas(?s) -> aLimitation(?og, 12 mois gratuit) 
+
+3) Les offres avec haute disponibilité et tarification "PayAsYouGo" sont recommandées pour les charges variables.
+OffreHauteDisponibilite(?o) ^ aTarification(?o, ?t) ^ PayAsYouGo(?t) -> RecommandeePour(?o, ChargesVariables) 
+
+4) Les offres haute disponibilité conviennent aux applications critiques.
+Offre(?o) ^ OffreHauteDisponibilite(?o) -> AdapteePour(?o, "ApplicationsCritiques")
