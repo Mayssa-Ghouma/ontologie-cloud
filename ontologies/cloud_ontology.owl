@@ -45,6 +45,9 @@
         <Class IRI="#PayAsYouGo"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Periode"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Service"/>
     </Declaration>
     <Declaration>
@@ -60,7 +63,19 @@
         <Class IRI="#Tarification"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Utilisateurs"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#ZoneGeographique"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#AdapteePour"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#RecommandeePour"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aLimitation"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#aTarification"/>
@@ -99,6 +114,9 @@
         <NamedIndividual IRI="#AppService"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ApplicationsCritiques"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Asia"/>
     </Declaration>
     <Declaration>
@@ -147,6 +165,9 @@
         <NamedIndividual IRI="#AzureVM"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ChargesVariables"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#EC2"/>
     </Declaration>
     <Declaration>
@@ -177,7 +198,16 @@
         <NamedIndividual IRI="#Office365"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Startups"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Workspace"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#12_mois_gratuit"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Abonnement"/>
@@ -208,6 +238,10 @@
         <Class IRI="#Tarification"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Periode"/>
+        <Class IRI="#OffreGratuite"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ServiceIaas"/>
         <Class IRI="#Service"/>
     </SubClassOf>
@@ -219,6 +253,19 @@
         <Class IRI="#ServiceSaas"/>
         <Class IRI="#Service"/>
     </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#OffreEconomique"/>
+        <Class IRI="#OffreGratuite"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#OffreGratuite"/>
+        <Class IRI="#OffreHauteDisponibilite"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ServiceIaas"/>
+        <Class IRI="#ServicePaas"/>
+        <Class IRI="#ServiceSaas"/>
+    </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#Fournisseur"/>
         <NamedIndividual IRI="#AWS"/>
@@ -248,6 +295,10 @@
         <NamedIndividual IRI="#AppService"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Utilisateurs"/>
+        <NamedIndividual IRI="#ApplicationsCritiques"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#ZoneGeographique"/>
         <NamedIndividual IRI="#Asia"/>
     </ClassAssertion>
@@ -312,6 +363,10 @@
         <NamedIndividual IRI="#AzureVM"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Utilisateurs"/>
+        <NamedIndividual IRI="#ChargesVariables"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#ServiceIaas"/>
         <NamedIndividual IRI="#EC2"/>
     </ClassAssertion>
@@ -352,8 +407,16 @@
         <NamedIndividual IRI="#Office365"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Utilisateurs"/>
+        <NamedIndividual IRI="#Startups"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#ServiceSaas"/>
         <NamedIndividual IRI="#Workspace"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Periode"/>
+        <NamedIndividual IRI="#12_mois_gratuit"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#propose"/>
@@ -789,6 +852,154 @@
         <ObjectProperty IRI="#propose"/>
         <Class IRI="#Offre"/>
     </ObjectPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Recommandation pour les startups</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#OffreEconomique"/>
+                <Variable IRI="/oe"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#disponibleDans"/>
+                <Variable IRI="/oe"/>
+                <Variable IRI="/zone"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#ZoneGeographique"/>
+                <Variable IRI="/zone"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#aTarification"/>
+                <Variable IRI="/oe"/>
+                <Variable IRI="/t"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Abonnement"/>
+                <Variable IRI="/t"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#RecommandeePour"/>
+                <Variable IRI="/oe"/>
+                <NamedIndividual IRI="#Startups"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Les offres haute disponibilité conviennent aux applications critiques.</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S4</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Offre"/>
+                <Variable IRI="/o"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#OffreHauteDisponibilite"/>
+                <Variable IRI="/o"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#AdapteePour"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#ApplicationsCritiques"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Limitations applicables</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S2</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#OffreGratuite"/>
+                <Variable IRI="/og"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#estDeType"/>
+                <Variable IRI="/og"/>
+                <Variable IRI="/s"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#ServiceIaas"/>
+                <Variable IRI="/s"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#aLimitation"/>
+                <Variable IRI="/og"/>
+                <NamedIndividual IRI="#12_mois_gratuit"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Les offres avec haute disponibilité et tarification &quot;PayAsYouGo&quot; sont recommandées pour les charges variables</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S3</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#OffreHauteDisponibilite"/>
+                <Variable IRI="/o"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#aTarification"/>
+                <Variable IRI="/o"/>
+                <Variable IRI="/t"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#PayAsYouGo"/>
+                <Variable IRI="/t"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#RecommandeePour"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#ChargesVariables"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#AppEngine</IRI>
@@ -869,5 +1080,4 @@
 
 
 <!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
-
 
