@@ -121,7 +121,7 @@ WHERE {
   ?offre ont:estProposePar ?fournisseur .
 }
 
-## 7. OWL 
+## 6. OWL 
 
 L’usage du langage **OWL (Web Ontology Language)** a permis de :
 - Définir des hiérarchies de classes (ex : Offre → OffreGratuite)
