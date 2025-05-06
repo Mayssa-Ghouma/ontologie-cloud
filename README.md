@@ -121,6 +121,33 @@ WHERE {
   ?offre ont:estProposePar ?fournisseur .
 }
 
+## 7. OWL 
+
+L’usage du langage **OWL (Web Ontology Language)** a permis de :
+- Définir des hiérarchies de classes (ex : Offre → OffreGratuite)
+- Préciser les domaines et portées des propriétés
+- Activer le raisonnement sémantique via les axiomes OWL (ex : disjonction, équivalence)
+- Vérifier la cohérence de l'ontologie automatiquement (via HermiT, Pellet…)
+
+🎯 Résultat : Des **inférences automatiques** comme l'appartenance d'une offre à plusieurs catégories en fonction de ses propriétés.
+
+---
+
+## 7. SWRL : Règles de raisonnement avancées
+
+Nous avons utilisé des **règles SWRL (Semantic Web Rule Language)** pour enrichir le raisonnement sur les offres Cloud. Voici quelques exemples :
+
+**Règles N°1: Recommandation pour les startups
+OffreEconomique(?oe) ^ disponibleDans(?oe, ?zone) ^ ZoneGeographique(?zone) ^ aTarification(?oe, ?t) ^ Abonnement(?t) -> RecommandeePour(?oe, Startups)  
+
+**Règles N°2: Limitations applicables
+OffreGratuite(?og) ^ estDeType(?og, ?s) ^ ServiceIaas(?s) -> aLimitation(?og, 12 mois gratuit) 
+
+**Règles N°3: Les offres avec haute disponibilité et tarification "PayAsYouGo" sont recommandées pour les charges variables
+OffreHauteDisponibilite(?o) ^ aTarification(?o, ?t) ^ PayAsYouGo(?t) -> RecommandeePour(?o, ChargesVariables) 
+
+**Règles N°4: Les offres haute disponibilité conviennent aux applications critiques.
+Offre(?o) ^ OffreHauteDisponibilite(?o) -> AdapteePour(?o, "ApplicationsCritiques")
 
 
 
